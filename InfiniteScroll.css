@@ -1,0 +1,5 @@
+.THIS .scrollerSize {
+    height: 95vh;
+    width: 100%;
+    overflow-x: hidden;
+}
