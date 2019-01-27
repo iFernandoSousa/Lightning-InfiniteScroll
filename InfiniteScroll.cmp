@@ -1,4 +1,4 @@
-<aura:component controller="YOUR_CONTROLLER_HERE">
+<aura:component controller="InfiniteScrollController">
     <aura:attribute name="records" type="Object" access="private"/>
     <aura:attribute name="sizeLimit" type="Integer" default="50" access="private"/>
     <aura:attribute name="hasMore" type="Boolean" default="False" access="private"/> 
