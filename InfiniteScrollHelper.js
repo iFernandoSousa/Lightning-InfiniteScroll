@@ -32,7 +32,7 @@
         
         component.set('v.sizeLimit', sizeLimit);
         
-        this.searchData(component, sizeLimit); 
+        this.loadData(component, sizeLimit); 
     },
     loadMoreData : function(component, parent, target) {
         let hasMore = component.get('v.hasMore');
