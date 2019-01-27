@@ -1,10 +1,12 @@
 public class InfiniteScrollController {
     @AuraEnabled
-    public static String searchForIds(Decimal sizeLimit) {
+    public static String loadMoreData(Decimal sizeLimit) {
         sizeLimit+=1;
         
-        return [SELECT Id, Name
-        FROM Account
-        LIMIT :sizeLimit];
+        List<Account> results = [SELECT Id, Name
+                                 FROM Account
+                                 LIMIT :sizeLimit];
+        
+        return JSON.serialize(results);
     }
 }
