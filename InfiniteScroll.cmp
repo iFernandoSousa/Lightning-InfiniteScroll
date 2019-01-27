@@ -10,7 +10,10 @@
         <ui:scrollerWrapper aura:id="scroller" class="scrollerSize">
             <div aura:id="infiniteScroll">
                 <aura:iteration items="{!v.records}" var="record">
-                    <!-- SHOW WHERE YOUR CONTENT {!record.xxx}-->
+                    <!-- SHOW WHERE YOUR CONTENT-->
+                    <div>
+                        {!record.Name}
+                    </div>
                 </aura:iteration>
             </div>
         </ui:scrollerWrapper>
