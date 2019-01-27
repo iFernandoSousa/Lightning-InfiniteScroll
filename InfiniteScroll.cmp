@@ -1,0 +1,18 @@
+<aura:component controller="YOUR_CONTROLLER_HERE">
+    <aura:attribute name="records" type="Object" access="private"/>
+    <aura:attribute name="sizeLimit" type="Integer" default="50" access="private"/>
+    <aura:attribute name="hasMore" type="Boolean" default="False" access="private"/> 
+    <aura:attribute name="isLoadinig" type="Boolean" default="False" access="private"/>
+
+    <aura:handler action="{!c.initHandler}" name="init" value="{!this}"/>
+    
+    <div>
+        <ui:scrollerWrapper aura:id="scroller" class="scrollerSize">
+            <div aura:id="infiniteScroll">
+                <aura:iteration items="{!v.records}" var="record">
+                    <!-- SHOW WHERE YOUR CONTENT {!record.xxx}-->
+                </aura:iteration>
+            </div>
+        </ui:scrollerWrapper>
+    </div>
+</aura:component>
